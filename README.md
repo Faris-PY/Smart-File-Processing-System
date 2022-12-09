@@ -1,11 +1,11 @@
 # Smart-File-Processing-System
 Azure Data Engineering
 
-This Project give insight about smart file processing using Azure.
+This Project gives insight into smart file processing using Azure.
 
 ![Architecture diagram](https://user-images.githubusercontent.com/107489749/206750345-f9837e95-1239-4527-8473-affb88df114a.png)
 
-## Resource used 
+## Resources used 
 1. Azure Databricks
 2. Data Factory
 3. Key vault
@@ -15,13 +15,13 @@ This Project give insight about smart file processing using Azure.
 
 ## Process step
 
-1. The Internal Application place CSV file in Azure datalake storage.
-2. The file will be receiving thrice a day.
-3. One the file received, ADF will trigger the pipeline(using storage event trigger)
+1. The Internal Application place CSV files in Azure datalake storage.
+2. The file will be received a day thrice.
+3. Once the file is received, ADF will trigger the pipeline(using storage event trigger)
 4. The ADF pipeline has databrick notebook associated with it.
 5. Databrick will do the following operations 
-   - Check wheather duplicate rows present. If it contains duplicate rows, file will be rejected and moved in rejected folder in datalake for further analysis.
-   - Validate the CSV file with the schema infered from the database. If validation fails, file will be moved to rejected folder. If pass, file will be moved to staging folder in datalake as well as to delta table in DBFS
+   - Check whether duplicate rows are present. If it contains duplicate rows, the file will be rejected and moved to a rejected folder in datalake for further analysis.
+   - Validate the CSV file with the schema inferred from the database. If validation fails, the file will be moved to a rejected folder. If pass, the file will be transferred to the staging folder in datalake as well as to the delta table in DBFS
 
 ## Functionalities covered as part of This project
 
@@ -30,3 +30,5 @@ This Project give insight about smart file processing using Azure.
 3. Databricks - job cluster, all-purpose cluster, secret scopes, delta table.
 4. Key vault - Keys, secrets  
 5. Datalake Gen2 - Shared Access Signatures (SAS), Lifecycle management
+
+
