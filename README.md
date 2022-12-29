@@ -10,7 +10,7 @@ This Project gives insight into smart file processing using Azure.
 2. Data Factory
 3. Key vault
 4. Datalake Gen2
-4. SQL database
+5. SQL database
 
 
 ## Process step
