@@ -1,0 +1,20 @@
+project2scope
+sqladminuser
+Azure123
+
+dapid4bebcb48edbc1a315ea18e9eab6f888-3	
+
+
+
+The Internal Application sends CSV file in Azure data lake storage
+The file is received thrice in a day 
+One the file received ADF pipeline will trigger, the attached databrick also
+Databrick will do the following operations 
+	Check wheather duplicate rows present or not
+	validate the CSV file with the schema infered from the Database
+Move all the rejected files to rejected folder in Datalake gen 2 and passed file to stagging folder and save a delta table in Azure Databrick
+
+
+Gen2 SAS
+Secret scope
+Delta table
